@@ -4,7 +4,7 @@ const OffreSpecialeController = require('../controllers/OffreSpecialeController'
 
 const router = express.Router();
 
-router.get('/', OffreSpecialeController.getExample);
-router.post('/', OffreSpecialeController.postExample);
+router.get('/', OffreSpecialeController.getOffre);
+router.post('/', OffreSpecialeController.postOffre);
 
 module.exports = router;
