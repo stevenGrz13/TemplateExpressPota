@@ -1,0 +1,15 @@
+// src/routes/exampleRoutes.js
+const express = require('express');
+const ExampleController = require('../controllers/ExampleController');
+// const exampleController = require('../controllers/exampleController');
+
+const router = express.Router();
+
+router.get('/insertUser', ExampleController.insertUser);
+
+router.get('/appel', ExampleController.antsoina);
+
+router.get('/', ExampleController.getExample);
+router.post('/', ExampleController.postExample);
+
+module.exports = router;
