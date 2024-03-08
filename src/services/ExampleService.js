@@ -23,15 +23,7 @@ function processPostData(postData) {
   return 'Données postées traitées avec succès';
 }
 
-async function insertUser(nom, desc, date_debut, date_fin) {
-  await mongoose.connect(`mongodb://localhost:27017/${config.database}`);
-  var offrespec = new OffreSpeciale({ nom: nom, description: desc, date_debut: new Date(date_debut), date_fin: new Date(date_fin) });
-  const savedUser = await offrespec.save();
-  return savedUser; 
-}
-
 module.exports = {
   getData,
   processPostData,
-  insertUser,
 };

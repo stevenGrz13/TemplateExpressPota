@@ -8,23 +8,6 @@ class ExampleController {
     res.json({message: 'VOAANTSO LE FONCTION'});
   }
 
-  async insertUser(req, res) {
-    try {
-      // Récupérer les informations nécessaires depuis les paramètres de requête
-      const { nom, description, date_debut, date_fin } = req.query;
-
-      // Valider les paramètres (vous pouvez ajouter une validation plus robuste si nécessaire)
-
-      // Appeler le service pour insérer l'utilisateur
-      const result = await ExampleService.insertUser({ nom, description, date_debut, date_fin }); 
-
-      res.json({ message: 'Utilisateur inséré avec succès', result });
-    } catch (error) {
-      console.error('Erreur lors de l\'insertion de l\'utilisateur:', error);
-      res.status(500).json({ message: 'Internal Server Error' });
-    }
-  }
-
   async getExample(req, res) {
     try {
       const data = await ExampleService.getData();

@@ -5,9 +5,9 @@ const OffreSpeciale = require('../models/OffreSpeciale');
 // require('dotenv').config();
 
 const connectDB = async () => {
-  // try {
+  try {
   //   // offline
-  //   await mongoose.connect(`mongodb://localhost:27017/${config.database}`);
+    await mongoose.connect(`mongodb://localhost:27017/First`);
   //   //online
   //   // await mongoose.connect(`mongodb+srv://${config.user}:${config.password}@cluster1.xys21au.mongodb.net/${config.database}`);
       
@@ -20,10 +20,10 @@ const connectDB = async () => {
   //     console.error('Erreur lors de l\'ajout de l\'utilisateur :', error);
   //   });
 
-  //   console.log('Connected to MongoDB');
-  // } catch (error) {
-  //   console.error('Error connecting to MongoDB:', error);
-  // }
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
 };
 
 module.exports = connectDB;

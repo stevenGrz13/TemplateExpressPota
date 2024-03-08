@@ -5,7 +5,6 @@ const ExampleController = require('../controllers/ExampleController');
 
 const router = express.Router();
 
-router.get('/insertUser', ExampleController.insertUser);
 
 router.get('/appel', ExampleController.antsoina);
 
