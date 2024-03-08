@@ -1,10 +1,12 @@
 // const ExampleModel = require('../models/ExampleModel');
 
-const ExampleModel = require("../models/ExempleModel");
+const OffreSpeciale = require('../models/OffreSpeciale');
+
+const config = require('../config/config');
 
 async function getData() {
   try {
-    const examples = await ExampleModel.find({});
+    const examples = await OffreSpeciale.find({});
     return examples;
   } catch (error) {
     console.error('Error fetching data from database:', error);
@@ -13,8 +15,8 @@ async function getData() {
 }
 
 function processPostData(postData) {
-  const exampleModel = new ExampleModel(postData);
-  exampleModel.save();
+  const offreSpecialeModel = new OffreSpeciale(postData);
+  offreSpecialeModel.save(); 
   return 'Données postées traitées avec succès';
 }
 
